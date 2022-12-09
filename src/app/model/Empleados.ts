@@ -1,5 +1,5 @@
 export class Empleados{
-    id ?:Number;
+    id ?: any | undefined;
     nombre ?:String;
     apellido ?:String;
     direccion ?:String;

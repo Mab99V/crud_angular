@@ -1,8 +1,10 @@
+import { Empleados } from './../model/Empleados';
 
 
 import { AuthService } from 'src/app/service/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -31,9 +33,8 @@ export class ConsultaComponent implements OnInit {
     this.router.navigateByUrl('/crud'); 
   }
 
-  editar(){
-    this.router.navigateByUrl('/editar');
-  }
+  
+
   
  
 }

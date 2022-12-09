@@ -16,6 +16,7 @@ export class EditarComponent implements OnInit {
 
   constructor(private activeRouter: ActivatedRoute, private router: Router, private auth: AuthService){}
 
+
   datos: Empleados | undefined;
   editar = new FormGroup({
     nombre: new FormControl('', Validators.required),
@@ -30,7 +31,7 @@ export class EditarComponent implements OnInit {
       this.datos=data
       this.editar.setValue({
         'nombre': this.datos.nombre,
-        'apellido': this.datos.nombre,
+        'apellido': this.datos.apellido,
         'direccion': this.datos.direccion,
         'telefono': this.datos.telefono
       })
@@ -50,5 +51,13 @@ export class EditarComponent implements OnInit {
     this.router.navigateByUrl('/consulta'); 
   }
 
+  eliminar(){
+     let emp: Empleados = this.datos?.id;
+    this.auth.deleteEmpleados(emp).subscribe(
+      (resp: any) => {this.router.navigateByUrl('/consulta');},
+    );
+      
+    
+  }
   
 }
