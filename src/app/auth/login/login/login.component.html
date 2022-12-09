@@ -4,13 +4,13 @@
         
         <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
         <p id="profile-name" class="profile-name-card"></p>
-        <form class="form-signin">
+        <form class="form-signin"  (ngSubmit)="Login(f)" #f="ngForm" >
             <span id="reauth-email" class="reauth-email"></span>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email " required autofocus>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit"
-            routerLink="/crud" >Iniciar sesion</button>
+            <input type="text" id="usernameOrEmail" class="form-control" name="usernameOrEmail"  placeholder="usernameOrEmail"  [(ngModel)]="admin.usernameOrEmail">
+            <input type="password" id="password" class="form-control" name="password" placeholder="password" [(ngModel)]="admin.password" >
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Iniciar sesion</button>
         </form>
+        
     
             <a routerLink="/registro" class="registro">Registarse</a>
             

@@ -1,16 +1,19 @@
+import { EditarComponent } from './editar/editar.component';
+import { ConsultaComponent } from './consulta/consulta.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login/login.component';
 import { RegistroComponent } from './auth/registro/registro/registro.component';
-import { EmpleadoListComponent } from './empleado-list/empleado-list.component';
+import { EmpleadosComponent } from './empleados/empleados.component';
 
 const routes: Routes = [
 
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component:LoginComponent},
   {path: 'registro',component:RegistroComponent},
-  {path: 'crud',component:EmpleadoListComponent},
-
+  {path: 'crud',component:EmpleadosComponent},
+  {path: 'consulta',component:ConsultaComponent},
+  {path:'editar/:id',component:EditarComponent},
 ];
 
 @NgModule({

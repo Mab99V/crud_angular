@@ -1,0 +1,14 @@
+.btnR{
+    position:relative;
+    left:401px;
+    top:2px;
+    padding-top:6px;
+    padding-bottom:6px;
+    padding-left:12px;
+    padding-right:12px;
+    width:83px;
+    height:34px;
+    border-width:1px;
+    border-radius:4px;
+    border-style:solid;
+}

@@ -1,0 +1,20 @@
+<div class = "container">
+    <form [formGroup]="editar" (ngSubmit)="Guardar(editar.value)">
+        <div class = "form-group" >
+                <label for ="empleadoFormControlInput">Nombre</label>
+                <input type = "text" class="form-control" placeholder="nombre" formControlName="nombre">
+                <label for ="empleadoFormControlInput">Apellido</label>
+                <input type = "text" class="form-control" placeholder="apellido" formControlName="apellido">
+                <label for ="empleadoFormControlInput">Direccion</label>
+                <input type = "text" class="form-control" placeholder="direccion" formControlName="direccion">
+                <label for ="empleadoFormControlInput">Telefono</label>
+                <input type = "text" class="form-control" placeholder="telefono" formControlName="telefono">
+            </div>
+            <br><br>
+            <div>
+                <button type = "submit" class="btn btn-primary">Guardar</button>
+                <button class="btnRe btn-primary " (click)="regreso()">Regresar</button>
+               
+            </div>
+    </form>
+</div>

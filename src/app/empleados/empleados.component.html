@@ -1,0 +1,41 @@
+
+
+<div class="container">
+    <div class="card card-container">
+      <label class="label">EMPLEADOS</label>
+      
+        <br>
+        <form class="row g-3" (ngSubmit)="guardar()">
+            <div class="col-md-6">
+            
+            
+              <label for="inputId" class="form-labelID">ID</label>
+              <input type="text" class="form-control" id="id" name="id"  placeholder="id">
+            </div>
+            <div class="col-md-6">
+              <label for="inputNombre" class="form-labelNom">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre"  placeholder="nombre" [(ngModel)]="empleado.nombre">
+            </div>
+            <div class="col-md-6">
+              <label for="inputApellido" class="form-labelAp">Apellido</label>
+              <input type="text" class="form-control" id="apellido" name="apellido"  placeholder="apellido" [(ngModel)]="empleado.apellido">
+            </div>
+            <div class="col-md-6">
+              <label for="inputDireccion" class="form-labelDi">Direccion</label>
+              <input type="text" class="form-control" id="direccion" name="direccion"  placeholder="direccion" [(ngModel)]="empleado.direccion">
+            </div>
+            <div class="col-md-6">
+              <label for="inputTelefono" class="form-labelTe">Telefono</label>
+              <input type="text" class="form-control" id="telefono" name="telefono"  placeholder="telefono" [(ngModel)]="empleado.telefono">
+            </div>
+             <br>
+             <div class="d-grid gap-2 d-md-block">
+              <button class="btn1 btn-primary " type="submit">Guardar Empleado</button>
+              <button class="btn2 btn-primary " (click)="consulta()">Ver Empleados</button>
+              <button class="btn3 btn-primary " (click)="exit()">Cerra Sesion</button>
+              
+            </div>
+          </form>
+          
+    </div>
+</div>
